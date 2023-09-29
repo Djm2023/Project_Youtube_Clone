@@ -36,8 +36,8 @@ const Head = () => {
             <span className="relative ml-5">
               <i className="fa-solid fa-bell cursor-pointer"></i>
             </span>
-            <span className="w-5 h-5 bg-red-600 absolute right-28 top-2 rounded-full text-xs pl-1 text-white">
-              5+
+            <span className="w-5 h-5 bg-red-600 absolute right-28 top-2 rounded-full text-xs pl-1.5 text-white">
+              5
             </span>
           </div>
           <div>
@@ -49,4 +49,3 @@ const Head = () => {
   );
 };
 export default Head;
-
