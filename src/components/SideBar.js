@@ -1,4 +1,42 @@
+ import { useSelector } from "react-redux";
+
 const SideBar = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+
+  // Early Return statement
+  if (!isMenuOpen) {
+    return (
+      <div className="w-20">
+        <div className="w-full flex justify-center">
+          <div className="types w-10/12 pl-7 pb-3">
+            <ul>
+              <li className="mb-5 mt-4 cursor-pointer">
+                <span className="pr-3">
+                  <i className="fa-solid fa-house text-lg"></i>
+                </span>
+              </li>
+              <li className="mb-5 mt-4 cursor-pointer">
+                <span className="pr-3">
+                  <i className="fa-solid fa-bolt text-lg"></i>
+                </span>
+              </li>
+              <li className="mb-5 mt-4 cursor-pointer">
+                <span className="pr-3">
+                  <i className="fa-solid fa-crown text-lg"></i>
+                </span>
+              </li>
+              <li className="mb-5 mt-4 cursor-pointer">
+                <span className="pr-3">
+                  <i className="fa-solid fa-bag-shopping text-lg"></i>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-sidebar h-screen overflow-auto">
       <div className="w-full flex justify-center">

@@ -1,8 +1,19 @@
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Head = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <div className="main-container w-full flex h-14 pl-6">
       <div className="logo-container w-44  flex justify-center items-center">
-        <div className="hamburger-icon w-10 h-10 text-xl pt-1 cursor-pointer">
+        <div
+          className="hamburger-icon w-10 h-10 text-xl pt-1 cursor-pointer"
+          onClick={() => toggleMenuHandler()}
+        >
           <i className="fa-solid fa-bars text-hamburger"></i>
         </div>
         <div className="youtube-icon w-28">
