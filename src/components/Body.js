@@ -3,7 +3,7 @@ import SideBar from "./SideBar";
 
 const Body = () => {
   return (
-    <div className="flex">
+    <div className="flex w-screen">
       <SideBar />
       <MainContainer />
     </div>

@@ -22,3 +22,6 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+.overflow-scroll::-webkit-scrollbar {
+    display: none;
+}
